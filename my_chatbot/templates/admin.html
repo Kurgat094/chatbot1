@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+My Chatbot
+{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    <div class="container">
+        <div class="chat-container">
+            {% csrf_token %}
+        <div class="chat-window" id="chat-window">
+            <div class="chat-message bot">Hello! How can I assist you today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button onclick="sendMessage(get_response)">Send</button>
+        </div>
+    </div>
+    </div>
+</form>
+{% endblock %}
